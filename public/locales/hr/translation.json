@@ -1,0 +1,24 @@
+{
+    "welcome": "Dobrodošli!",
+    "login": "Prijava",
+    "logout": "Odjava",
+    "profile": "Profil",
+    "register": "Registracija",
+    "newAccount": "Registracija novog korisnika",
+    "exsitAccount": "Prijava postojećeg korisnika",
+    "email": "Email",
+    "password": "Lozinka",
+    "confirmPassword": "Potvrdi lozinku",
+    "username": "Korisničko ime",
+    "name": "Ime",
+    "surname": "Prezime",
+    "dateOfBirth": "Datum rođenja",
+    "phoneNumber": "Broj telefona",
+    "next": "Dalje",
+    "termsAndConditions": "Prihvaćam uvijete korištenja"
+
+
+
+
+  }
+  

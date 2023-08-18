@@ -1,0 +1,24 @@
+{
+    "welcome": "Welcome!",
+    "login": "Login",
+    "logout": "Logout",
+    "profile": "Profile",
+    "register": "Register",
+    "newAccount": "Create new account",
+    "exsitAccount": "Login with existing account",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "username": "Username",
+    "name": "Name",
+    "surname": "Surname",
+    "dateOfBirth": "Date of Birth",
+    "phoneNumber": "Phone number",
+    "next": "Next",
+    "termsAndConditions": "I accept the Terms and Conditions"
+
+
+
+
+  }
+  

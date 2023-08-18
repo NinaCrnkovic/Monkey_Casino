@@ -1,11 +1,12 @@
 import React, { useState, useRef, useContext } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import AuthContext from '../../store/auth-context';
 import classes from './AuthForm.module.css';
 
 const AuthForm = () => {
   const history = useNavigate();
-  
+  const { t } = useTranslation();
   const nameInputRef = useRef();
   const surnameInputRef = useRef();
   const dobInputRef = useRef(); // Date of Birth
@@ -124,21 +125,23 @@ const AuthForm = () => {
   };
   
 
+
+  
   return (
     <section className={classes.auth}>
-      <h1>{isLogin ? 'Login' : 'Sign Up'}</h1>
+      <h1>{isLogin ? t('login') : t('register')}</h1>
       {isLogin ? (
         <form onSubmit={submitHandler}>
           <div className={classes.control}>
-            <label htmlFor='email'>Your Email</label>
+            <label htmlFor='email'>{t('email')}</label>
             <input type='email' id='email' required ref={emailInputRef} />
           </div>
           <div className={classes.control}>
-            <label htmlFor='password'>Your Password</label>
+            <label htmlFor='password'>{t('password')}</label>
             <input type='password' id='password' required ref={passwordInputRef} />
           </div>
           <div className={classes.actions}>
-            {!isLoading && <button>Login</button>}
+            {!isLoading && <button>{t('login')}</button>}
             {isLoading && <p>Sending request...</p>}
           </div>
         </form>
@@ -147,50 +150,50 @@ const AuthForm = () => {
           {registrationStep === 1 ? (
             <form onSubmit={proceedToNextStep}>
               <div className={classes.control}>
-                <label htmlFor='name'>Name</label>
+                <label htmlFor='name'>{t('name')}</label>
                 <input type='text' id='name' required ref={nameInputRef} />
               </div>
               <div className={classes.control}>
-                <label htmlFor='surname'>Surname</label>
+                <label htmlFor='surname'>{t('surname')}</label>
                 <input type='text' id='surname' required ref={surnameInputRef} />
               </div>
               <div className={classes.control}>
-                <label htmlFor='dob'>Date of Birth</label>
+                <label htmlFor='dob'>{t('dateOfBirth')}</label>
                 <input type='date' id='dob' required ref={dobInputRef} />
               </div>
               <div className={classes.control}>
-                <label htmlFor='phoneNumber'>Phone Number</label>
+                <label htmlFor='phoneNumber'>{t('phoneNumber')}</label>
                 <input type='tel' id='phoneNumber' required ref={phoneNumberInputRef} />
               </div>
               <div className={classes.actions}>
-              <button type='submit' >Next</button>
+              <button type='submit'>{t('next')}</button>
               </div>
             </form>
           ) : (
             <form onSubmit={submitHandler}>
               <div className={classes.control}>
-                <label htmlFor='email'>Your Email</label>
+                <label htmlFor='email'>{t('email')}</label>
                 <input type='email' id='email' required ref={emailInputRef} />
               </div>
               <div className={classes.control}>
-                <label htmlFor='username'>Username</label>
+                <label htmlFor='username'>{t('username')}</label>
                 <input type='text' id='username' required ref={usernameInputRef} />
               </div>
               <div className={classes.control}>
-                <label htmlFor='password'>Your Password</label>
+                <label htmlFor='password'>{t('password')}</label>
                 <input type='password' id='password' required ref={passwordInputRef} />
               </div>
               <div className={classes.control}>
-                <label htmlFor='passwordConfirm'>Confirm Password</label>
+                <label htmlFor='passwordConfirm'>{t('confirmPassword')}</label>
                 <input type='password' id='passwordConfirm' required ref={passwordConfirmInputRef} />
               </div>
               <div className={classes.control}>
                 <label>
-                  <input type='checkbox' id='terms' ref={termsInputRef} /> I accept the terms and conditions
+                  <input type='checkbox' id='terms' ref={termsInputRef} /> {t('termsAndConditions')}
                 </label>
               </div>
               <div className={classes.actions}>
-                {!isLoading && <button>Create Account</button>}
+                {!isLoading && <button>{t('register')}</button>}
                 {isLoading && <p>Sending request...</p>}
               </div>
             </form>
@@ -203,11 +206,13 @@ const AuthForm = () => {
           className={classes.toggle}
           onClick={switchAuthModeHandler}
         >
-          {isLogin ? 'Create new account' : 'Login with existing account'}
+          {isLogin ? t('newAccount') : t('exsitAccount')}
         </button>
       </div>
     </section>
   );
 };
+
+
 
 export default AuthForm;
