@@ -25,7 +25,8 @@
     "termsAndConditions": "You must accept the terms of use!",
     "sendingRequest": "Sending request...",
     "underageError": "You must be of legal age!",
-    "invalidEmail": "Invalid email!"
+    "invalidEmail": "Invalid email!",
+    "invalidUsername": "Username must be at least 5 characters long!"
   
   },
   "navigation": {

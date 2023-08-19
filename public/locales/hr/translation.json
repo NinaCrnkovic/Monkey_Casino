@@ -25,7 +25,8 @@
       "termsAndConditions": "Morate prihvatiti uvijete korištenja!",
       "sendingRequest": "Šaljem zahtjev...",
       "underageError": "Morate biti punoljetni!",
-      "invalidEmail": "Neispravan email!"
+      "invalidEmail": "Neispravan email!",
+      "invalidUsername": "Neispravno korisničko ime!"
 
     },
     "navigation": {

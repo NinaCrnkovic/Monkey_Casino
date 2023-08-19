@@ -3,6 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import AuthContext from '../../store/auth-context';
 import classes from './AuthForm.module.css';
+//import formData from './formData.json';
+
 
 const validators = {
   minLength: (value, targetLength) => value.length >= targetLength,
@@ -95,6 +97,11 @@ const AuthForm = () => {
         alert(t('messages.emptyFieldsAlert'));
         return;
       }
+
+      if (!enteredUsername || enteredUsername.length < 5) {
+        alert(t('messages.invalidUsername'));
+        return;
+    }
 
       if (!validateInput('emailValidator', enteredEmail)) {
         alert(t('messages.invalidEmail'));
