@@ -1,24 +1,39 @@
 {
-    "welcome": "Dobrodošli!",
+    "form": {
     "login": "Prijava",
-    "logout": "Odjava",
-    "profile": "Profil",
-    "register": "Registracija",
-    "newAccount": "Registracija novog korisnika",
-    "exsitAccount": "Prijava postojećeg korisnika",
-    "email": "Email",
-    "password": "Lozinka",
-    "confirmPassword": "Potvrdi lozinku",
-    "username": "Korisničko ime",
-    "name": "Ime",
-    "surname": "Prezime",
-    "dateOfBirth": "Datum rođenja",
-    "phoneNumber": "Broj telefona",
-    "next": "Dalje",
-    "termsAndConditions": "Prihvaćam uvijete korištenja"
+      "confirmPassword": "Potvrdi lozinku",
+      "username": "Korisničko ime",
+      "name": "Ime",
+      "surname": "Prezime",
+      "dateOfBirth": "Datum rođenja",
+      "phoneNumber": "Broj telefona",
+      "register": "Registracija",
+      "newAccount": "Registracija novog korisnika",
+      "exsitAccount": "Prijava postojećeg korisnika",
+      "email": "Email",
+      "password": "Lozinka",
+      "termsAndConditions": "Prihvaćam uvijete korištenja",
+      "newPassword": "Nova lozinka",
+      "changePassword": "Promijeni lozinku",
+      "next": "Dalje"
+    },
+    "messages": {
+      "welcome": "Dobrodošli!",
+      "yourProfile": "Vaš korisnički profil",
+      "emptyFieldsAlert": "Sva polja moraju biti popunjena!",
+      "passwordsDontMatch": "Lozinke se ne podudaraju!",
+      "termsAndConditions": "Morate prihvatiti uvijete korištenja!",
+      "sendingRequest": "Šaljem zahtjev...",
+      "underageError": "Morate biti punoljetni!",
+      "invalidEmail": "Neispravan email!"
 
-
-
-
+    },
+    "navigation": {
+   
+      "logout": "Odjava",
+      "profile": "Profil",
+      "english": "Engleski",
+      "croatian": "Hrvatski"
+    }
   }
   

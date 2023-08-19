@@ -1,24 +1,38 @@
 {
-    "welcome": "Welcome!",
+  "form": {
     "login": "Login",
-    "logout": "Logout",
-    "profile": "Profile",
-    "register": "Register",
-    "newAccount": "Create new account",
-    "exsitAccount": "Login with existing account",
-    "email": "Email",
-    "password": "Password",
     "confirmPassword": "Confirm password",
     "username": "Username",
     "name": "Name",
     "surname": "Surname",
     "dateOfBirth": "Date of Birth",
     "phoneNumber": "Phone number",
-    "next": "Next",
-    "termsAndConditions": "I accept the Terms and Conditions"
-
-
-
-
-  }
+    "register": "Register",
+    "newAccount": "Create new account",
+    "exsitAccount": "Login with existing account",
+    "email": "Email",
+    "password": "Password",
+    "termsAndConditions": "I accept the Terms and Conditions",
+    "newPassword": "New password",
+    "changePassword": "Change password",
+    "next": "Next"
+  },
+  "messages": {
+    "welcome": "Welcome!",
+    "yourProfile": "Your user profile",
+    "emptyFieldsAlert": "All fields must be filled out!",
+    "passwordsDontMatch": "Passwords do not match!",
+    "termsAndConditions": "You must accept the terms of use!",
+    "sendingRequest": "Sending request...",
+    "underageError": "You must be of legal age!",
+    "invalidEmail": "Invalid email!"
   
+  },
+  "navigation": {
+  
+    "logout": "Logout",
+    "profile": "Profile",
+    "english": "English",
+    "croatian": "Croatian"
+  }
+}

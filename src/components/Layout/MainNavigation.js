@@ -25,21 +25,22 @@ const MainNavigation = () => {
       </Link>
       <nav>
         <ul>
-          <li>
-            <select className={classes.languageDropdown} onChange={changeLanguage}>
-              <option value="en">English</option>
-              <option value="hr">Croatian</option>
-            </select>
-          </li>
+          
           {!isLoggedIn && (<li>
-            <Link to='/auth'>{t('login')}</Link>
+            <Link to='/auth'>{t('form.login')}</Link>
           </li>)}
           {isLoggedIn && (<li>
-            <Link to='/profile'>{t('profile')}</Link>
+            <Link to='/profile'>{t('navigation.profile')}</Link>
           </li>)}
           {isLoggedIn && <li>
-            <button onClick={logoutHandler}>{t('logout')}</button>
+            <button onClick={logoutHandler}>{t('navigation.logout')}</button>
           </li>}
+          <li>
+            <select className={classes.languageDropdown} onChange={changeLanguage}>
+              <option value="en">{t('navigation.english')}</option>
+              <option value="hr">{t('navigation.croatian')}</option>
+            </select>
+          </li>
         </ul>
       </nav>
     </header>
