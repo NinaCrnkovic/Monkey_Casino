@@ -26,7 +26,8 @@
     "sendingRequest": "Sending request...",
     "underageError": "You must be of legal age!",
     "invalidEmail": "Invalid email!",
-    "invalidUsername": "Username must be at least 5 characters long!"
+    "invalidUsername": "Username must be at least 5 characters long!",
+    "successfulRegistration": "Successful registration!"
   
   },
   "navigation": {

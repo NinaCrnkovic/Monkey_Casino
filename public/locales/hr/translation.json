@@ -26,7 +26,8 @@
       "sendingRequest": "Šaljem zahtjev...",
       "underageError": "Morate biti punoljetni!",
       "invalidEmail": "Neispravan email!",
-      "invalidUsername": "Neispravno korisničko ime!"
+      "invalidUsername": "Neispravno korisničko ime!",
+      "successfulRegistration": "Uspješna registracija!"
 
     },
     "navigation": {

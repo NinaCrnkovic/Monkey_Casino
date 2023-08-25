@@ -34,7 +34,7 @@ const AuthForm = () => {
   const passwordInputRef = useRef();
   const passwordConfirmInputRef = useRef();
   const termsInputRef = useRef();
-  const notify = useNotification();
+  const { showNotification } = useNotification();
   const authCtx = useContext(AuthContext);
 
   const [isLogin, setIsLogin] = useState(true);
@@ -59,12 +59,12 @@ const AuthForm = () => {
     const enteredPhoneNumber = phoneNumberInputRef.current.value;
 
     if (!enteredName || !enteredSurname || !enteredDOB || !enteredPhoneNumber) {
-      notify(t('messages.emptyFieldsAlert'));
+      alert(t('messages.emptyFieldsAlert'));
       return;
     }
 
     if (!validateInput('olderThan', enteredDOB, 18)) { 
-      notify(t('messages.underageError'));
+      alert(t('messages.underageError'));
       return;
     }
 
@@ -146,6 +146,7 @@ const AuthForm = () => {
       .then((res) => {
         setIsLoading(false);
         if (res.ok) {
+          showNotification(t('messages.successfulRegistration'));
           return res.json();
           
 
@@ -180,6 +181,7 @@ const AuthForm = () => {
 
   
   return (
+
     <section className={classes.auth}>
       <h1>{isLogin ? t('form.login') : t('form.register')}</h1>
       {isLogin ? (
