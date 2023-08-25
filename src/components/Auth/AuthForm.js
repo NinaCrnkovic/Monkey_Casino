@@ -2,6 +2,7 @@ import React, { useState, useRef, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import AuthContext from '../../store/auth-context';
+import { useNotification } from '../../store/notification-context';
 import classes from './AuthForm.module.css';
 //import formData from './formData.json';
 
@@ -26,14 +27,14 @@ const AuthForm = () => {
   const { t } = useTranslation();
   const nameInputRef = useRef();
   const surnameInputRef = useRef();
-  const dobInputRef = useRef(); // Date of Birth
+  const dobInputRef = useRef(); 
   const phoneNumberInputRef = useRef();
   const emailInputRef = useRef();
   const usernameInputRef = useRef();
   const passwordInputRef = useRef();
   const passwordConfirmInputRef = useRef();
   const termsInputRef = useRef();
-
+  const notify = useNotification();
   const authCtx = useContext(AuthContext);
 
   const [isLogin, setIsLogin] = useState(true);
@@ -58,16 +59,16 @@ const AuthForm = () => {
     const enteredPhoneNumber = phoneNumberInputRef.current.value;
 
     if (!enteredName || !enteredSurname || !enteredDOB || !enteredPhoneNumber) {
-      alert(t('messages.emptyFieldsAlert'));
+      notify(t('messages.emptyFieldsAlert'));
       return;
     }
 
-    if (!validateInput('olderThan', enteredDOB, 18)) { // Osobe mlađe od 18 godina ne smiju se registrirati
-      alert(t('messages.underageError'));
+    if (!validateInput('olderThan', enteredDOB, 18)) { 
+      notify(t('messages.underageError'));
       return;
     }
 
-    // Preskoči na korak 2
+   
     setRegistrationStep(2);
   };
 
@@ -77,7 +78,7 @@ const AuthForm = () => {
     const enteredEmail = emailInputRef.current.value;
     const enteredPassword = passwordInputRef.current.value;
   
-    // Ako je korisnik u modusu prijave, ne trebate provjeravati ostala polja
+
     if (isLogin) {
       if (!enteredEmail || !enteredPassword) {
         alert(t('messages.emptyFieldsAlert'));
@@ -146,6 +147,8 @@ const AuthForm = () => {
         setIsLoading(false);
         if (res.ok) {
           return res.json();
+          
+
         } else {
           return res.json().then((data) => {
             let errorMessage = 'Authentication failed!';
@@ -250,7 +253,9 @@ const AuthForm = () => {
                 {!isLoading && <button>{t('form.register')}</button>}
                 {isLoading && <>
              <p>{t('messages.sendingRequest')}</p>
-             <div className="loader"></div>
+             <div className={classes.loader}></div>
+
+
             </>}
               </div>
             </form>
